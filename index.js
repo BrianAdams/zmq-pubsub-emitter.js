@@ -1,6 +1,6 @@
 var zmq = require('zmq');
 var util = require('util');
-var EventEmitter2 = require('EventEmitter2');
+var EventEmitter2 = require('eventemitter2');
 
 //http://byronsalau.com/blog/how-to-create-a-guid-uuid-in-javascript/
 function createGuid()
