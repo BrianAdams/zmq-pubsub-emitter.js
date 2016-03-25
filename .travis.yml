@@ -6,8 +6,8 @@ before_install:
 - ./autogen.sh
 - ./configure
 - make
-- make install
-- /sbin/ldconfig
+- sudo make install
+- sudo /sbin/ldconfig
 - cd ..
 language: node_js
 node_js:
@@ -20,4 +20,4 @@ addons:
     packages:
       - uuid-dev
 script: npm test
-sudo: false
+sudo: true

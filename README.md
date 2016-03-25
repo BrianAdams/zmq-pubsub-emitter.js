@@ -1,6 +1,6 @@
 This module lets you interact with zeroMQ pubsub as if it was an eventEmitter.
 
--Badges-
+[![Build Status](https://travis-ci.org/BrianAdams/zmq-pubsub-emitter.js.svg?branch=master)](https://travis-ci.org/BrianAdams/zmq-pubsub-emitter.js)
 
 To install
 
