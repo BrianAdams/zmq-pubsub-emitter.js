@@ -9,6 +9,7 @@
   "author": "Brian Adams <brian@babastik.com>",
   "license": "MIT",
   "devDependencies": {
+    "portfinder": "^1.0.3",
     "tape": "^4.5.1"
   },
   "dependencies": {

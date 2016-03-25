@@ -1,17 +1,25 @@
 var test = require('tape');
 var pupSubURI = 'tcp://127.0.0.1:3555';
-
+var portfinder = require('portfinder');
 var pubSocket;
 var subSocket;
 var zmqEmitter;
 
+test('prep',function(t){
+  portfinder.getPort(function (err, port) {
+    pupSubURI = 'tcp://127.0.0.1:'+port;
+  });
+  t.end();
+});
 
 test('zmq emitter can connect to a ZeroMQ pup-sub socket.',{timeout:1000},function(t){
+
     var zmq = require('zmq');
     zmqEmitter = require('../')();
 
     pubSocket = zmq.socket('pub');
     subSocket = zmq.socket('sub');
+
     pubSocket.bindSync(pupSubURI);
     subSocket.connect(pupSubURI);
 
@@ -33,6 +41,13 @@ test('cleanup',function(t){
   pubSocket = null;
   subSocket = null;
   zmqEmitter = null;
+  t.end();
+});
+
+test('prep',function(t){
+  portfinder.getPort(function (err, port) {
+    pupSubURI = 'tcp://127.0.0.1:'+port;
+  });
   t.end();
 });
 
@@ -68,6 +83,13 @@ test('cleanup',function(t){
   t.end();
 });
 
+test('prep',function(t){
+  portfinder.getPort(function (err, port) {
+    pupSubURI = 'tcp://127.0.0.1:'+port;
+  });
+  t.end();
+});
+
 test('zmq publishied events are are emitted on the event emitter',{timeout:1000},function(t){
     var zmq = require('zmq');
     zmqEmitter = require('../')();
@@ -76,6 +98,9 @@ test('zmq publishied events are are emitted on the event emitter',{timeout:1000}
     //wait up to 500ms for the subscriber to retry connecting to the socket before it would
     //receive messages.
     pubSocket = zmq.socket('pub');
+
+    //The first times the tests run, this call often fails with address is use. After that,
+    //no errors.
     pubSocket.bindSync(pupSubURI);
     t.plan(1);
 
