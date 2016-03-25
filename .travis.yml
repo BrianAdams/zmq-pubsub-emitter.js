@@ -11,9 +11,10 @@ before_script:
   - npm install -g codeclimate-test-reporter
   - npm install -d
 after_success:
+  - tap --coverage-report=text-lcov > ./lcov.info
   - codeclimate-test-reporter < ./lcov.info
 addons:
   apt:
     packages:
       - libzmq3-dev
-script: tap --cov --coverage-report=text-lcov tests/test.js > ./lcov.info
+script: tap --cov tests/test.js
