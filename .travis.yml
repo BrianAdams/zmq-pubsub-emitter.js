@@ -1,8 +1,13 @@
 language: node_js
 node_js:
-  - latest
   - stable
+  - 4.2
   - 0.10
   - 0.12
+addons:
+  apt:
+    packages:
+      - zeromq-devel
+      - pkg-config  
 script: npm test
 sudo: false
