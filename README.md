@@ -1,5 +1,7 @@
 This module lets you interact with zeroMQ pubsub as if it was an eventEmitter.
 
+-Badges-
+
 To install
 
 `npm install zmq-pubsub-emitter`
