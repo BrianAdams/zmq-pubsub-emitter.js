@@ -1,6 +1,8 @@
 This module lets you interact with zeroMQ pubsub as if it was an eventEmitter.
 
 [![Build Status](https://travis-ci.org/BrianAdams/zmq-pubsub-emitter.js.svg?branch=master)](https://travis-ci.org/BrianAdams/zmq-pubsub-emitter.js)
+[![Code Climate](https://codeclimate.com/github/BrianAdams/zmq-pubsub-emitter.js/badges/gpa.svg)](https://codeclimate.com/github/BrianAdams/zmq-pubsub-emitter.js)
+[![Test Coverage](https://codeclimate.com/github/BrianAdams/zmq-pubsub-emitter.js/badges/coverage.svg)](https://codeclimate.com/github/BrianAdams/zmq-pubsub-emitter.js/coverage)
 
 To install
 
