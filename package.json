@@ -1,6 +1,6 @@
 {
   "name": "zmq-pubsub-emitter",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Encapsulates a pub-sub zeroMQ connection in to an eventEmitter for node.js",
   "main": "index.js",
   "scripts": {
