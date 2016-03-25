@@ -6,14 +6,12 @@ language: node_js
 node_js:
   - stable
   - 4.2
-  - 0.10
-  - 0.12
 before_script:
   - npm install -g codeclimate-test-reporter
   - npm install -g grunt-cli
   - npm install -d
 after_success:
-  - codeclimate-test-reporter < ./coverage/lcov.info  
+  - codeclimate-test-reporter < ./coverage/lcov.info
 addons:
   apt:
     packages:
