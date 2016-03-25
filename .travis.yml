@@ -13,6 +13,4 @@ addons:
   apt:
     packages:
       - libzmq3-dev
-  code_climate:
-    repo_token: 51701790e6b426cac56c98ef50dcfea641e2b62c97d9e92de2856bff8e20e6f0
 script: tap tests/test.js
