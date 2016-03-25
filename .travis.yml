@@ -1,3 +1,14 @@
+env:
+- ZMQ="git://github.com/zeromq/zeromq4-x.git -b v4.0.3"
+before_install:
+- git clone --depth 1 $ZMQ zmqlib
+- cd zmqlib
+- ./autogen.sh
+- ./configure
+- make
+- make install
+- /sbin/ldconfig
+- cd ..
 language: node_js
 node_js:
   - stable
@@ -7,7 +18,6 @@ node_js:
 addons:
   apt:
     packages:
-      - zeromq-devel
-      - pkg-config  
+      - uuid-dev
 script: npm test
 sudo: false
