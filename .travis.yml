@@ -1,5 +1,5 @@
 env:
-- ZMQ="git://github.com/zeromq/zeromq4-x.git -b v4.0.3"
+- ZMQ="git://github.com/zeromq/zeromq4-x.git"
 before_install:
 - git clone --depth 1 $ZMQ zmqlib
 - cd zmqlib
