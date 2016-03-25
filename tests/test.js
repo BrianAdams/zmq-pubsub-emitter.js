@@ -12,7 +12,7 @@ test('prep',function(t){
   t.end();
 });
 
-test('zmq emitter can connect to a ZeroMQ pup-sub socket.',{timeout:1000},function(t){
+test('zmq emitter can connect to a ZeroMQ pup-sub socket.',{timeout:2000},function(t){
 
     var zmq = require('zmq');
     zmqEmitter = require('../')();
@@ -51,7 +51,7 @@ test('prep',function(t){
   t.end();
 });
 
-test('events emitted on eventemitter flow to subscriber process',{timeout:1000},function(t){
+test('events emitted on eventemitter flow to subscriber process',{timeout:2000},function(t){
     var zmq = require('zmq');
     zmqEmitter = require('../')();
 
@@ -90,7 +90,7 @@ test('prep',function(t){
   t.end();
 });
 
-test('zmq publishied events are are emitted on the event emitter',{timeout:1000},function(t){
+test('zmq publishied events are are emitted on the event emitter',{timeout:2000},function(t){
     var zmq = require('zmq');
     zmqEmitter = require('../')();
 
